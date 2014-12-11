@@ -24,19 +24,20 @@
 				}
 			
 			.sidebar{
-				background: white;
+				
 				float: left;
-				width: 280px;
+				width: 250px;
 				padding:10px;
 				margin-left: -100%;
+				padding-right: 15px;
 			}
 			.slideshow{
-				background: green;
+				background: #888;
 				
 				
 			}
 			.info_text{
-				background: green;
+				background: #888;
 				padding:10px;
 			}
 			.footer{
@@ -45,25 +46,28 @@
 			}
 			.wrapper{
 				width: 100%;
+				background-color: #aaa;
 			}
 			.clear_float{
 				clear:both;
 			}
 			body{
 				margin:0;
+				 background-image: url("pictures/deathnote.jpg");
 			}
 			.main_container{
-				margin-left: 300px;
+				margin-left: 275px;
+				border-left: 3px solid #555;
 						
 			}
 			.sidebar, .main_container{
 				position: relative;
 				float: left;
-				background-color: gray;
+				
 			}
 			table{
-    border: 1px solid black;
-    table-layout: fixed;
+				border: 1px solid black;
+				table-layout: fixed;
     
 }
 			.sidebar .1{ 
@@ -98,6 +102,10 @@
 						  <img src="pictures/fixed-phone-screen.jpg">
 						</div>
 					  </div>
+					  <div class="m-scooch-controls m-scooch-hud">
+        <a class="m-scooch-prev" href="#" data-m-slide="prev">Previous</a>
+        <a class="m-scooch-next" href="#" data-m-slide="next">Next</a>
+    </div>
 					  <!-- the controls -->
 					  <div class="m-scooch-controls m-scooch-bulleted">
 						<a href="#" data-m-slide="1" class="m-active">1</a>
