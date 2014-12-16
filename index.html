@@ -189,5 +189,29 @@
 	<!-- include scooch.js -->
 	<script src="js/scooch.js"></script>
 	<!-- construct the carousel -->
-	<script>$('.m-scooch').scooch()</script>
+	<script>
+		$('.m-scooch').scooch();
+		var scoocher = $('.m-scooch');
+		var scoochItems = $('.m-item');
+		var numItems = scoochItems.size();
+		var count = 1;
+		console.log(numItems);
+		var interval = setInterval(
+			function() {
+				if (count === numItems) {
+					scoocher.scooch('move', 1);
+					count = 0;
+				}	else {
+					scoocher.scooch('next');
+				}
+				count++;
+			}, 
+		2500);
+		console.log($('[data-m-slide]'));
+		$('[data-m-slide]').click(function() {
+			count = $(this).attr('data-m-slide');
+			clearInterval(interval);
+			console.log($(this).attr('data-m-slide'));
+		});
+	</script>
 </html>
